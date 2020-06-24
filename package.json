@@ -1,0 +1,21 @@
+{
+  "name": "mern",
+  "version": "1.0.0",
+  "description": "mern example",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js"
+  },
+  "author": "Zharavin Arkady",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.20"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
