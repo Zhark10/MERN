@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "server": "nodemon app.js"
+    "server": "nodemon app.js",
+    "client":  "yarn --cwd client start",
+    "dev": "concurrently \"yarn server\" \"yarn client\""
   },
   "author": "Zharavin Arkady",
   "license": "ISC",
@@ -14,6 +16,7 @@
     "config": "^3.3.1",
     "express": "^4.17.1",
     "express-validator": "^6.6.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.20"
   },
   "devDependencies": {
