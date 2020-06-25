@@ -7,7 +7,7 @@
     "start": "node app.js",
     "server": "nodemon app.js",
     "client":  "yarn --cwd client start",
-    "dev": "concurrently \"yarn server\" \"yarn client\""
+    "dev": "concurrently \"yarn server\" \"yarn --cwd client start\""
   },
   "author": "Zharavin Arkady",
   "license": "ISC",
