@@ -1,6 +1,6 @@
 import React from 'react';
 import 'materialize-css'
-import {BrowserRouter} from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import { useRoutes } from './routes';
 
 function App() {
