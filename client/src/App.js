@@ -1,16 +1,18 @@
 import React from 'react';
-import 'materialize-css'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 import { useRoutes } from './routes';
+import { useAuth } from './hooks/auth.hook';
+import 'materialize-css'
 
 function App() {
-  const routes = useRoutes(false)
+  const {token,login,logout,userId} = useAuth()
+  const routes = useRoutes(token)
   return (
-    <BrowserRouter>
+    <Router>
       <div className="container">
         {routes}
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 

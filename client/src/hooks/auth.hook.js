@@ -1,4 +1,4 @@
-import {useState, useCallback} from 'react'
+import {useState, useCallback, useEffect} from 'react'
 
 const storageName = 'userData'
 
@@ -20,6 +20,14 @@ export const useAuth = () => {
     setUserId(null)
     localStorage.removeItem(storageName)
   }, [])
+
+  useEffect(()=>{
+    const data = JSON.parse(localStorage.getItem(storageName))
+    
+    if (data && data.token) {
+      login(data.token, data.userId)
+    }
+  }, [login])
 
   return {login, logout, token, userId}
 }
